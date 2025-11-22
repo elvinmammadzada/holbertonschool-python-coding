@@ -1,6 +1,13 @@
 #!/usr/bin/python3
+"""
+This module defines a class Square with a private size attribute.
+Includes method to compute area.
+"""
+
+
 class Square:
-    """Square with private size, validation, and area method."""
+    """Square with private size and area computation."""
+
     def __init__(self, size=0):
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -9,4 +16,5 @@ class Square:
         self.__size = size
 
     def area(self):
+        """Return the area of the square."""
         return self.__size ** 2
